@@ -3,9 +3,11 @@ from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
+
 @app.get("/status")
 def read_status():
     return {"status": "OK"}
+
 
 @app.get("/", response_class=HTMLResponse)
 def home():
